@@ -46,7 +46,10 @@ const app = express();
 const PORT = ENVIRONMENT.PORT;
 
 // Habilitamos las consultas cross-origin
-app.use(cors())
+app.use(cors({
+    origin: "https://api-slack-proyecto-final-front-end.vercel.app",
+    credentials: true
+}))
 
 // Parse JSON
 app.use(express.json());
